@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import Heading from './components/Heading'
+import { Header } from 'react-native-elements';
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -8,10 +10,16 @@ const instructions = Platform.select({
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>I am Lawrence</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
+    <View>
+
+    
+    <Heading
+    leftComponent={{icon: 'menu', color: '#fff'}}/>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>I am Lawrence</Text>
+        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>{instructions}</Text>
+      </View>
     </View>
   );
 }
