@@ -23,11 +23,11 @@ const NavigationBar = (props) => {
         const toggle = () => setIsOpen(!isOpen);
     return (
         <div>
-           <Navbar color="dark" light expand="md">
+           <Navbar color="dark" dark expand="md">
         <NavbarBrand style={{color: 'white'}} href="/">Cupcake Shop</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+        <NavbarToggler color="dark" style={{color: 'white'}} onClick={toggle} />
+        <Collapse style={{color: 'white'}} isOpen={isOpen} navbar>
+          <Nav className="mr-auto" style={{color: 'white'}} navbar>
             
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle style={{color: 'white'}} nav caret>
