@@ -18,11 +18,11 @@ public class CakeBatter {
 
     @Id
     @GeneratedValue
-    @Column(name = "cake_batter_id")
+    @Column(name = "cid")
     private long id;
 
 
-    @Column(name = "cake_batter_name")
+    @Column(name = "cakebattername")
     private String cakeBatterName;
 
     @Column(name = "price")

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NavigationBar from './NavigationBar'
 import axios from 'axios';
+import Menu from './Menu'
 
 export default class Home extends Component {
     state = {
@@ -26,8 +27,11 @@ export default class Home extends Component {
         console.log(this.call);
         return (
             <div>
-                <NavigationBar/>
-                <div class="parallax" style={{backgroundImage: `url(${this.state.backgroundImage})` }}>Hello</div>
+                <NavigationBar id="sticky"/>
+                <div class="parallax" style={{backgroundImage: `url(${this.state.backgroundImage})` }}>
+                    <p id="welcome">Welcome to the Cupcake Shop</p>
+                </div>
+                <Menu></Menu>
                 
             </div>
         )

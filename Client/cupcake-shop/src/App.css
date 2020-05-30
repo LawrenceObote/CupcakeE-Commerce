@@ -9,16 +9,15 @@
   color: white;
 }
 .parallax {
-  /* The image used */
-
-  /* Set a specific height */
-  height: 500px;
-
-  /* Create the parallax scrolling effect */
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 .custom-toggler .navbar-toggler {
@@ -31,5 +30,20 @@
 
 .collapse navbar-collapse {
   color: white;
+}
+
+#welcome {
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 40px;
+  text-align: center;
+  justify-self: center;
+}
+
+#sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
   

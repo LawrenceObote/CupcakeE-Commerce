@@ -22,7 +22,7 @@ const NavigationBar = (props) => {
       
         const toggle = () => setIsOpen(!isOpen);
     return (
-        <div>
+        <div id="sticky">
            <Navbar color="dark" dark expand="md">
         <NavbarBrand style={{color: 'white'}} href="/">Cupcake Shop</NavbarBrand>
         <NavbarToggler color="dark" style={{color: 'white'}} onClick={toggle} />

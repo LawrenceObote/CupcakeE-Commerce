@@ -61,7 +61,7 @@ public class CupcakeController {
         Cupcake cupcake = cupcakeRepository.findById(id)
                 .orElseThrow(()-> new ResourceNotFoundException("Cupcake not found for this id :: " + id));
 
-        cupcake.setCupcakeName(cupcakeDetails.getCupcakeName());
+        cupcake.setName(cupcakeDetails.getName());
         cupcake.setPrice(cupcakeDetails.getPrice());
 
 

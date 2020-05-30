@@ -18,12 +18,12 @@ public class Cupcake {
 
     @Id
     @GeneratedValue
-    @Column(name = "cupcake_id")
+    @Column(name = "id")
     private long id;
 
 
-    @Column(name = "cupcake_name")
-    private String cupcakeName;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "price")
     private int price;
@@ -37,7 +37,7 @@ public class Cupcake {
 
     public Cupcake(String cupcakeName) {
         super();
-        this.cupcakeName = cupcakeName;
+        this.name = name;
 
     }
 
@@ -50,12 +50,12 @@ public class Cupcake {
     }
 
 
-    public String getCupcakeName() {
-        return cupcakeName;
+    public String getName() {
+        return name;
     }
 
-    public void setCupcakeName(String cupcakeName) {
-        this.cupcakeName = cupcakeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPrice() {
