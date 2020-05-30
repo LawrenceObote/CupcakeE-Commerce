@@ -23,21 +23,21 @@ const NavigationBar = (props) => {
         const toggle = () => setIsOpen(!isOpen);
     return (
         <div>
-           <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+           <Navbar color="dark" light expand="md">
+        <NavbarBrand style={{color: 'white'}} href="/">Cupcake Shop</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle style={{color: 'white'}} nav caret>
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem tag={Link} to="/cupcakes">
+                <DropdownItem  tag={Link} to="/cupcakes">
                   Cupcakes
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/cakebatter">
+                <DropdownItem  tag={Link} to="/cakebatter">
                   CakeBatter
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/frosting">
@@ -46,7 +46,7 @@ const NavigationBar = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavLink>Contact</NavLink>
+          <NavItem style={{color: 'white'}} tag={Link} to="/contact">Contact</NavItem>
         </Collapse>
       </Navbar>
   </div>
