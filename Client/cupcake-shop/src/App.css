@@ -46,4 +46,12 @@
   width: 100%;
   z-index: 9999;
 }
-  
+
+
+.wrapper{
+  margin-top: 55px;
+}
+
+.card-margin-top{
+margin-top: 80px;
+}

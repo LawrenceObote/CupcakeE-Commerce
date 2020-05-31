@@ -5,15 +5,15 @@ import {
   } from 'reactstrap';
   import {Container} from 'reactstrap';
 
-export default function Item() {
+export default function Item(props) {
     return (
         <div className="wrapper">
             <Container>
             <Card className="card-margin-top">
-                <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+                <CardImg top width="100%" height="300px" src={props.image} alt="Card image cap" />
                 <CardBody>
-                    <CardTitle>name FROM DATABASE</CardTitle>
-                    <CardSubtitle>price(REPLACE)</CardSubtitle>
+                    <CardTitle>{props.name}</CardTitle>
+                    <CardSubtitle>{props.price}</CardSubtitle>
                     <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                 </CardBody>
                 </Card>
