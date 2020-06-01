@@ -24,7 +24,7 @@ import com.example.cupcakeBackend.model.CakeBatter;
 import com.example.cupcakeBackend.repository.CakeBatterRepository;
 
 @RestController
-@RequestMapping("/cakeBatters/v1")
+@RequestMapping("/cupcakeShop/v1")
 
 public class CakeBatterController {
 

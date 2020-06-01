@@ -24,7 +24,7 @@ import com.example.cupcakeBackend.model.Frosting;
 import com.example.cupcakeBackend.repository.FrostingRepository;
 
 @RestController
-@RequestMapping("/frosting/v1")
+@RequestMapping("/cupcakeShop/v1")
 
 public class FrostingController {
 

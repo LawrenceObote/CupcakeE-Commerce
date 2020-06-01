@@ -28,6 +28,9 @@ public class Cupcake {
     @Column(name = "price")
     private int price;
 
+    @Column(name = "imageURL")
+    private String imageURL;
+
 
 
 
@@ -38,6 +41,8 @@ public class Cupcake {
     public Cupcake(String cupcakeName) {
         super();
         this.name = name;
+        this.price = price;
+        this.imageURL = imageURL;
 
     }
 
@@ -64,6 +69,14 @@ public class Cupcake {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getImageURL(){
+        return imageURL;
+    }
+
+    public void setImageURL(){
+        this.imageURL = imageURL;
     }
 
 
