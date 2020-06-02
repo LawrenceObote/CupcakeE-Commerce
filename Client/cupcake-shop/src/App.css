@@ -81,3 +81,7 @@ p{
   background-color: #343a40;
   color: white;
 }
+
+li{
+  list-style: none;
+}
