@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 import {Link} from 'react-router-dom';
 
 export default function Menu() {
