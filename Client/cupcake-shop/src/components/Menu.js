@@ -10,11 +10,10 @@ export default function Menu() {
                 <Col md="6">
                 <Card>
                         <CardImg top width="100%" src="https://bakerish.com/wp-content/uploads/2019/03/VANILLA-CUPCAKES.jpg" alt="Cupcake" />
-                        <CardBody>
+                        <CardBody className="card-colors">
                         <CardTitle tag={Link} to="/cupcakes">Cupcakes</CardTitle>
                         <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</CardText>
                         <CardText>
-                            <small className="text-muted">Last updated 3 mins ago</small>
                         </CardText>
                         </CardBody>
                     </Card>
@@ -23,11 +22,10 @@ export default function Menu() {
                 <Col md="6">
                     <Card>
                         <CardImg top width="100%" src="https://i0.wp.com/brookewilkerson.com/wp-content/uploads/2019/09/cream-cheese-frosting.jpg?fit=683%2C1024&ssl=1" alt="Frosting" />
-                        <CardBody>
+                        <CardBody className="card-colors">
                         <CardTitle tag={Link} to="/frosting">Frosting</CardTitle>
                         <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</CardText>
                         <CardText>
-                            <small className="text-muted">Last updated 3 mins ago</small>
                         </CardText>
                         </CardBody>
                     </Card>
