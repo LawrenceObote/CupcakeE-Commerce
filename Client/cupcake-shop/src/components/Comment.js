@@ -29,8 +29,8 @@ export const  Comment = ({comment}) => {
             </div>
 
             <div className="buttons">
-                <button className="button text-white" id="create-button" onClick={onUpdate}>Update</button>
-                <button className="button text-white" id="delete-button" onClick={onDelete}>Delete</button>
+                <button className="button text-black" id="create-button" onClick={onUpdate}>Update</button>
+                <button className="button text-black" id="delete-button" onClick={onDelete}>Delete</button>
             </div>
             <br></br>
             

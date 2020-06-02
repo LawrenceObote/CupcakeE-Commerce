@@ -35,7 +35,8 @@ export default function AddComment() {
         axios.get(`http://localhost:8070/cupcakeShop/v1/comments/`)
         .then(res => {
             comments = res.data;
-            setComments(comments);
+            let reversedComments = comments.map( comment=> comment).reverse();
+            setComments(reversedComments);
             
         })
     } )
