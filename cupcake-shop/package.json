@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8070",
+  "proxy": "https://cors-anywhere.herokuapp.com/https://cupcake-frontend.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
