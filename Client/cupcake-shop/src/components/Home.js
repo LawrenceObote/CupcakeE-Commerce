@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import NavigationBar from './NavigationBar'
 import axios from 'axios';
 import Menu from './Menu'
+import AddComment from './AddComment'
 
 export default class Home extends Component {
     state = {
@@ -24,7 +25,6 @@ export default class Home extends Component {
         
     }
     render() {
-        console.log(this.call);
         return (
             <div>
                 <NavigationBar id="sticky"/>
@@ -32,6 +32,7 @@ export default class Home extends Component {
                     <p id="welcome">Welcome to the Cupcake Shop</p>
                 </div>
                 <Menu></Menu>
+                <AddComment></AddComment>
                 
             </div>
         )

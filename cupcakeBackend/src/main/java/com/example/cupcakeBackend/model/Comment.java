@@ -18,11 +18,11 @@ public class Comment {
 
     @Id
     @GeneratedValue
-    @Column(name = "timestamp")
-    private int id;
+    @Column(name = "id")
+    private Long id;
 
 
-    @Column(name = "comment")
+    @Column(name = "comment", length = 1500)
     private String comment;
 
 
@@ -44,11 +44,11 @@ public class Comment {
 
 
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -56,7 +56,7 @@ public class Comment {
         return comment;
     }
 
-    public void setComment(String Comment) {
+    public void setComment(String comment) {
         this.comment = comment;
     }
 

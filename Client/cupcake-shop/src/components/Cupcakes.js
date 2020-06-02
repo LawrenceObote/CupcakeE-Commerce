@@ -9,6 +9,7 @@ import {
 import { render } from 'react-dom';
 import axios from 'axios';
 import AddComment from './AddComment'
+import Comment from './Comment';
 
 class Cupcakes extends Component {
 
@@ -17,23 +18,20 @@ class Cupcakes extends Component {
         this.state = {cupcakes: [], isLoading: true};
         // this.remove = this.remove.bind(this);
         this.getCupcakes = this.getCupcakes.bind(this);
-        console.log(this.state.cupcakes);
     }
 
      getCupcakes = async () => {
        
         const {cupcakes} =this.state;
-        const response = await axios.get('http://localhost:8090/cupcakeShop/v1/cupcakes/', cupcakes)
+        const response = await axios.get('http://localhost:8070/cupcakeShop/v1/cupcakes/', cupcakes)
         this.setState({data: response.data})
        
         
-    console.log(this.state.data[0].name);
-    console.log(this.state.data.name);
     }
 
 
     componentDidMount(){
-        axios.get(`http://localhost:8090/cupcakeShop/v1/cupcakes/`)
+        axios.get(`http://localhost:8070/cupcakeShop/v1/cupcakes/`)
         .then(res => {
             const cupcakes = res.data;
             this.setState({cupcakes})
@@ -43,6 +41,7 @@ class Cupcakes extends Component {
     render() {
         return (
         <div>
+            <NavigationBar/>
             <Row>
             {this.state.cupcakes.map(cupcake => 
             <Col md="4">
@@ -50,7 +49,7 @@ class Cupcakes extends Component {
             </Col>   
             )}
         </Row>
-    // return (
+    {/* // return (
     //     <div>
     //         <NavigationBar></NavigationBar>
     //         <Row className="side-margin">
@@ -76,7 +75,7 @@ class Cupcakes extends Component {
     //             </Col>
     //         </Row>
     //     </div>
-    // )
+    // ) */}
 
     <AddComment></AddComment>
     </div>

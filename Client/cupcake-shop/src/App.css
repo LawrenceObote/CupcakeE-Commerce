@@ -20,6 +20,14 @@
  
 }
 
+.contact{
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  text-align: center;
+  justify-self: center;
+  
+}
+
 .custom-toggler .navbar-toggler {
   border-color: white;
 }
@@ -54,4 +62,8 @@
 
 .card-margin-top{
 margin-top: 80px;
+}
+
+p{
+  text-align: center;
 }

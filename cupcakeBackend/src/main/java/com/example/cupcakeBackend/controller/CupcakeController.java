@@ -63,6 +63,7 @@ public class CupcakeController {
 
         cupcake.setName(cupcakeDetails.getName());
         cupcake.setPrice(cupcakeDetails.getPrice());
+        cupcake.setImageURL(cupcakeDetails.getImageURL());
 
 
 

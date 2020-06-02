@@ -64,6 +64,7 @@ public class FrostingController {
 
         frosting.setFrostingName(frostingDetails.getFrostingName());
         frosting.setPrice(frostingDetails.getPrice());
+        frosting.setImageURL(frostingDetails.getImageURL());
 
 
 

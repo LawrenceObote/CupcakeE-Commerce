@@ -9,7 +9,7 @@ import {
 import Home from './components/Home';
 import Cupcakes from './components/Cupcakes';
 import CakeBatter from './components/CakeBatter';
-import Frosting from './components/CakeBatter';
+import Frosting from './components/Frosting';
 import Contact from './components/Contact';
 
 class App extends Component {

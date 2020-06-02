@@ -75,7 +75,7 @@ public class Cupcake {
         return imageURL;
     }
 
-    public void setImageURL(){
+    public void setImageURL(String imageURL){
         this.imageURL = imageURL;
     }
 

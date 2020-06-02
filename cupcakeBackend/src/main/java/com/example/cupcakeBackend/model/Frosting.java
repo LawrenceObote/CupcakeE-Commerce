@@ -28,6 +28,9 @@ public class Frosting {
     @Column(name = "price")
     private int price;
 
+    @Column(name = "imageURL")
+    private String imageURL;
+
 
 
 
@@ -39,6 +42,7 @@ public class Frosting {
         super();
         this.frostingName = frostingName;
         this.price = price;
+        this.imageURL = imageURL;
 
     }
 
@@ -66,6 +70,10 @@ public class Frosting {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public String getImageURL(){ return imageURL;}
+
+    public void setImageURL(String imageURL){this.imageURL = imageURL;}
 
 
 }
