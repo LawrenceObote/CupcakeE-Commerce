@@ -2,12 +2,18 @@ import React from 'react'
 import axios from 'axios'
 
 export const  Comment = ({comment}) => {
-    const[name, setName] = React.useState(comment.name);
-    
+    const[name, setName] = React.useState(comment.comment);
+
+  
+
 
 
     const onUpdate = () => {
-        axios.put(`/cupcakeShop/v1/comments/${comment.id}`)
+
+        let text = JSON.parse(`{"comment":"${name}"}`);
+        console.log("hi",text);
+        axios.put(`/cupcakeShop/v1/comments/${comment.id}`, text)
+        
       }
 
       const onDelete = () => {

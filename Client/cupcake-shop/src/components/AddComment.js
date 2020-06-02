@@ -35,21 +35,26 @@ export default function AddComment() {
         axios.get(`http://localhost:8070/cupcakeShop/v1/comments/`)
         .then(res => {
             comments = res.data;
-            console.log("huh", comments);
+            setComments(comments);
+            
         })
     } )
     return (
         <div>
+            {/* <textarea id="new-comment-box" value={newComment}
+                    onChange={e => setNewComment(e.target.value)}
+                    />
+            <button className="button text-white" id="create-button" onClick={onCreate}>Create</button> */}
+            {comments.map(comment =>(
+                <li id="list-comment" key={comment.id}>
+                    <Comment comment={comment}></Comment>
+                </li>
+            ))}
+{/*     
             <textarea id="new-comment-box" value={newComment}
                     onChange={e => setNewComment(e.target.value)}
                     />
-            <button className="button text-white" id="create-button" onClick={onCreate}>Create</button>
-
-            {comments.map(comment =>(
-                <li id="list-comment" key={comments.id}>
-                    <Comment comment={comments}/>
-                </li>
-            ))}
+            <button className="button text-white" id="create-button" onClick={onCreate}>Create</button> */}
         </div>
     )
 }

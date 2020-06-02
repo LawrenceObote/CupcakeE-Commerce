@@ -35,6 +35,7 @@ class Cupcakes extends Component {
         .then(res => {
             const cupcakes = res.data;
             this.setState({cupcakes})
+            console.log("cupcakes",cupcakes);
         })
     
     }
