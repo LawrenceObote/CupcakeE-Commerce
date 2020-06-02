@@ -37,9 +37,6 @@ const NavigationBar = (props) => {
                 <DropdownItem  style={{color: 'black'}} tag={Link} to="/cupcakes">
                   Cupcakes
                 </DropdownItem>
-                <DropdownItem  tag={Link} to="/cakebatter">
-                  CakeBatter
-                </DropdownItem>
                 <DropdownItem tag={Link} to="/frosting">
                   Frosting
                 </DropdownItem>
