@@ -13,7 +13,6 @@ export default class Home extends Component {
             return axios.get(`https://api.unsplash.com/photos/random?&query=cupcake&client_id=4_-191W_jUgFQg_ujNLY9H3gpr7zGA4yY8ffZXQoJO0`)
             .then(response => {
                 const img = response.data.urls.regular;
-                console.log(response.data.urls.regular);
                 this.setState({
                     backgroundImage: img
                 })
