@@ -1,6 +1,6 @@
 # Cupcake E-Commerce Site
 
-## The third party API I am using is https://unsplash.com/documentation.
+## The third party API I am using is [Unsplash](https://unsplash.com/documentation.)
 
 ## Mission Statement 
 This app was created to display the cupcake shop's products and their contact information. 
