@@ -26,6 +26,7 @@ export default class Home extends Component {
     render() {
 
     return (
+        <div>
         <div className="contact" style={{backgroundImage: `url(${this.state.backgroundImage})` }}>
             <NavigationBar></NavigationBar>
             <h1 >Contact Us</h1>
@@ -48,7 +49,9 @@ export default class Home extends Component {
             <br></br>
             <p>Donation Requests</p>
             <p>submit here</p>
-
+            
+        </div>
+        <AddComment></AddComment>
         </div>
     )
 }
