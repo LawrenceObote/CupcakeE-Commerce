@@ -33,14 +33,14 @@ const NavigationBar = (props) => {
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle style={{ color: 'white' }} nav caret>
                                 Options
-               </DropdownToggle>
+              </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem style={{ color: 'black' }} tag={Link} to="/cupcakes">
                                     Cupcakes
-                 </DropdownItem>
+                </DropdownItem>
                                 <DropdownItem tag={Link} to="/frosting">
                                     Frosting
-                 </DropdownItem>
+                </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>

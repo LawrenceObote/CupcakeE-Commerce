@@ -11,45 +11,45 @@ class Cupcakes extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {cupcakes: [], isLoading: true};
+        this.state = { cupcakes: [], isLoading: true };
         this.getCupcakes = this.getCupcakes.bind(this);
     }
 
-     getCupcakes = async () => {
-       
-        const {cupcakes} =this.state;
-        const response = await axios.get('http://localhost:8070/cupcakeShop/v1/cupcakes/', cupcakes)
-        this.setState({data: response.data})
-       
-        
+    getCupcakes = async () => {
+
+        const { cupcakes } = this.state;
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com', cupcakes)
+        this.setState({ data: response.data })
+
+
     }
 
 
-    componentDidMount(){
-        axios.get(`http://localhost:8070/cupcakeShop/v1/cupcakes/`)
-        .then(res => {
-            const cupcakes = res.data;
-            this.setState({cupcakes})
-            console.log("cupcakes",cupcakes);
-        })
-    
+    componentDidMount() {
+        axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/`)
+            .then(res => {
+                const cupcakes = res.data;
+                this.setState({ cupcakes })
+                console.log("cupcakes", cupcakes);
+            })
+
     }
     render() {
         return (
-        <div>
-            <NavigationBar/>
-            <Row>
-            {this.state.cupcakes.map(cupcake => 
-                <Col md="4">
-                <Item name={cupcake.name} price={`$` +`${cupcake.price}`} image={cupcake.imageURL}/>
-                </Col>   
-            )}
-            </Row>
-    
+            <div>
+                <NavigationBar />
+                <Row>
+                    {this.state.cupcakes.map(cupcake =>
+                        <Col md="4">
+                            <Item name={cupcake.name} price={`$` + `${cupcake.price}`} image={cupcake.imageURL} />
+                        </Col>
+                    )}
+                </Row>
 
-            <AddComment></AddComment>
-        </div>
-        ) 
-}
+
+                <AddComment></AddComment>
+            </div>
+        )
+    }
 }
 export default Cupcakes;

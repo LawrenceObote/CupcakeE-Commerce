@@ -5,53 +5,74 @@ import Comment from './Comment'
 
 
 export default function AddComment() {
-    let [comments, setComments] = React.useState([])
-    const [newComment, setNewComment] = React.useState()
+    let [comments, setComments] = React.useState([]);
+    let [newComment, setNewComment] = React.useState();
 
-    
-    const getData = async () => {
-        setComments = axios.get(`/cupcakeShop/v1/comments`);
-        
-    }
+
+    // const getData = async () => {
+    //     const res = await axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/comments/`)
+    //     comments = res.data;
+    //     let reversedComments = comments.map(comment => comment).reverse();
+    //     setComments(reversedComments);
+
+    // }
     const onCreate = () => {
 
-
-            
-            try {
-                const response = axios.post(`/cupcakeShop/v1/comments/`,{
-            comment: `${newComment}`
+        axios({
+            method: 'post',
+            url: 'https://cors-anywhere.herokuapp.com/http://localhost:8070/cupcakeShop/v1/comments',
+            data: {
+                comment: "comment"
+            }
         })
-        console.log('Returned Data:', response)
-            } catch(e) {
-                console.log(`axios request failed:  ${e}`)
-            }    
+
+        // const letters = `${newComment}`
+        // try {
+        //     const response = axios.post(`https://cors-anywhere.herokuapp.com/http://localhost:8080/cupcakeShop/v1/comments`, {
+        //         comment: "hello"
+        //     })
+
+        // } catch (e) {
+        //     console.log(`axios request failed:  ${e}`)
+        // }
     }
 
-    useEffect(() =>{
-        axios.get(`http://localhost:8070/cupcakeShop/v1/comments/`)
-        .then(res => {
+    useEffect(() => {
+        async function getData() {
+            const res = await axios.get(`https://cors-anywhere.herokuapp.com/http://localhost:8080/cupcakeShop/v1/comments`)
             comments = res.data;
-            let reversedComments = comments.map( comment=> comment).reverse();
+            let reversedComments = comments.map(comment => comment).reverse();
             setComments(reversedComments);
-            
-        })
-    } )
+
+        }
+        // const res = axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/comments/`)
+        // comments = res.data;
+        // let reversedComments = comments.map(comment => comment).reverse();
+        // setComments(reversedComments);
+
+        // .then(res => {
+        //     comments = res.data;
+        //     let reversedComments = comments.map(comment => comment).reverse();
+        //     setComments(reversedComments);
+
+    })
+
     return (
         <div>
             <textarea id="new-comment-box" value={newComment}
-                    onChange={e => setNewComment(e.target.value)}
-                    />
+                onChange={e => setNewComment(e.target.value)}
+            />
             <button className="button text-white" id="create-button" onClick={onCreate}>Create</button>
-            {comments.map(comment =>(
+            {comments.map(comment => (
                 <li id="list-comment" key={comment.id}>
                     <Comment comment={comment}></Comment>
                 </li>
             ))}
-{/*     
+
             <textarea id="new-comment-box" value={newComment}
-                    onChange={e => setNewComment(e.target.value)}
-                    />
-            <button className="button text-white" id="create-button" onClick={onCreate}>Create</button> */}
+                onChange={e => setNewComment(e.target.value)}
+            />
+            <button className="button text-white" id="create-button" onClick={onCreate}>Create</button>
         </div>
     )
 }

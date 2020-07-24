@@ -22,7 +22,7 @@ class Frosting extends Component {
      getFrostings = async () => {
        
         const {frostings} = this.state;
-        const response = await axios.get('/cupcakeShop/v1/frosting/', frostings)
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/frosting/', frostings)
         this.setState({data: response.data})
        
         
@@ -30,7 +30,7 @@ class Frosting extends Component {
 
 
     componentDidMount(){
-        axios.get(`/cupcakeShop/v1/frosting/`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/frosting/`)
         .then(res => {
             const frostings = res.data;
             this.setState({frostings})
