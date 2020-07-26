@@ -6,6 +6,12 @@ import { render } from 'react-dom';
 import axios from 'axios';
 import AddComment from './AddComment'
 import Comment from './Comment';
+import Vanilla from '../assets/cupcakeVanilla.jpg';
+import Chocolate from '../assets/cupcakeChocolate.jpg';
+import Carrot from '../assets/cupcakeCarrot.jpg';
+import Pumpkin from '../assets/cupcakePumpkin.jpg';
+import RedVelvet from '../assets/cupcakeRedVelvet.jpg';
+import Strawberry from '../assets/cupcakeStrawberry.jpg';
 
 class Cupcakes extends Component {
 
@@ -39,11 +45,24 @@ class Cupcakes extends Component {
             <div>
                 <NavigationBar />
                 <Row>
-                    {this.state.cupcakes.map(cupcake =>
-                        <Col md="4">
-                            <Item name={cupcake.name} price={`$` + `${cupcake.price}`} image={cupcake.imageURL} />
-                        </Col>
-                    )}
+                    <Col md="4">
+                        <Item name={"Vanilla"} price={"$3"} image={Vanilla} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Chocolate"} price={"$3"} image={Chocolate} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Carrot"} price={"$3"} image={Carrot} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Pumpkin"} price={"$3"} image={Pumpkin} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Red Velvet"} price={"$3"} image={RedVelvet} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Strawberry"} price={"$3"} image={Strawberry} />
+                    </Col>
                 </Row>
 
 
