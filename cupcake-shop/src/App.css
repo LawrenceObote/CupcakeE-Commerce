@@ -94,3 +94,13 @@ li{
   background-color: #343a40;
   color: white;
 }
+
+.comment{
+    margin: 0 auto;
+}
+
+.new-comment-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -31,8 +31,9 @@ export default class Home extends Component {
                     <p id="welcome">Welcome to the Cupcake Shop</p>
                 </div>
                 <Menu></Menu>
-                <AddComment></AddComment>
-
+                <div className="new-comment-box">
+                    <AddComment className="new-comment-box"></AddComment>
+                </div>
             </div>
         )
     }
