@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export const Comment = ({ comment }) => {
-    const [name, setName] = React.useState(comment.comment);
+    let [name, setName] = React.useState(comment.comment);
     let [comments, setComments] = React.useState([]);
-    let [newComment, setNewComment] = React.useState([]);
+
 
 
     const getData = async () => {

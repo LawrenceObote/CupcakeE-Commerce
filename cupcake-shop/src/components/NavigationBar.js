@@ -6,14 +6,11 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem,
-    NavbarText
+    DropdownItem
 } from 'reactstrap';
-import { Transition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 
 const NavigationBar = (props) => {

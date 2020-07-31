@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import NavigationBar from './NavigationBar'
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Item from './Item'
-import { render } from 'react-dom';
 import axios from 'axios';
 import AddComment from './AddComment'
-import Comment from './Comment';
 import Vanilla from '../assets/cupcakeVanilla.jpg';
 import Chocolate from '../assets/cupcakeChocolate.jpg';
 import Carrot from '../assets/cupcakeCarrot.jpg';
@@ -66,7 +64,9 @@ class Cupcakes extends Component {
                 </Row>
 
 
-                <AddComment></AddComment>
+                <div className="new-comment-box">
+                    <AddComment className="new-comment-box"></AddComment>
+                </div>
             </div>
         )
     }

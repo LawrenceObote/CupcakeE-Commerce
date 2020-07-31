@@ -1,58 +1,65 @@
 import React, { Component } from 'react'
 import NavigationBar from './NavigationBar'
-import { Container, Row, Col } from 'reactstrap';
-import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'reactstrap';
-  import Item from './Item'
-import { render } from 'react-dom';
+import { Row, Col } from 'reactstrap';
+import Item from './Item'
 import axios from 'axios';
 import AddComment from './AddComment';
+import Vanilla from '../assets/vanillaFrosting.webp';
+import Chocolate from '../assets/chocolateFrosting.jpg';
+import Strawberry from '../assets/strawberryFrosting.jpg'
 
 class Frosting extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {frostings: [], isLoading: true};
+        this.state = { frostings: [], isLoading: true };
         // this.remove = this.remove.bind(this);
         this.getFrostings = this.getFrostings.bind(this);
     }
 
-     getFrostings = async () => {
-       
-        const {frostings} = this.state;
+    getFrostings = async () => {
+
+        const { frostings } = this.state;
         const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/frosting/', frostings)
-        this.setState({data: response.data})
-       
-        
+        this.setState({ data: response.data })
+
+
     }
 
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/frosting/`)
-        .then(res => {
-            const frostings = res.data;
-            this.setState({frostings})
-        })
-    
+            .then(res => {
+                const frostings = res.data;
+                this.setState({ frostings })
+            })
+
     }
     render() {
 
         return (
-        <div>
-          <NavigationBar></NavigationBar>
-            <Row>
-            {this.state.frostings.map(frosting => 
-            <Col md="4">
-            <Item name={frosting.frostingName} price={`$` +`${frosting.price}`} image={frosting.imageURL}/>
-            </Col>   
-            )}
-        </Row>
+            <div>
+                <NavigationBar></NavigationBar>
+                <Row>
 
-        <AddComment></AddComment>
-        </div>
-        ) 
-}
+                    <Col md="4">
+                        <Item name={"Vanilla"} price={`$3`} image={Vanilla} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Chocolate"} price={`$3`} image={Chocolate} />
+                    </Col>
+                    <Col md="4">
+                        <Item name={"Strawberry"} price={`$3`} image={Strawberry} />
+                    </Col>
+
+
+                </Row>
+
+                <div className="new-comment-box">
+                    <AddComment className="new-comment-box"></AddComment>
+                </div>
+            </div>
+        )
+    }
 }
 export default Frosting;

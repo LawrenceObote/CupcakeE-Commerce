@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import Comment from './Comment'
 
 
 
-export default class AddComment extends React.Component {
+class AddComment extends Component {
 
     constructor(props) {
         super(props);
@@ -13,7 +13,7 @@ export default class AddComment extends React.Component {
             newComment: ''
         }
         this.handleChange = this.handleChange.bind(this);
-
+        this.getData = this.getData.bind(this);
     }
 
     componentDidMount() {
@@ -23,26 +23,19 @@ export default class AddComment extends React.Component {
     getData = async () => {
         const res = await axios.get(`https://cors-anywhere.herokuapp.com/https://cupcake-backend.herokuapp.com/cupcakeShop/v1/comments/`)
         let comments = res.data;
-        this.setState = { comments: res.data };
-        console.log(this.state);
         let reversedComments = comments.map(comment => comment).reverse();
-        this.setState = { comments: reversedComments };
+        this.setState({ comments: reversedComments });
+        console.log(reversedComments);
+        console.log(this.state.comments);
 
     }
 
-    handleChange(e) {
-        this.setState({
-            newComment: e.target.value
-        })
+    handleChange = (e) => {
+        this.setState({ newComment: e.target.value });
+        console.log(this.state.newComment)
     }
 
     render() {
-
-
-
-
-
-
 
         const onCreate = () => {
             axios({
@@ -52,25 +45,13 @@ export default class AddComment extends React.Component {
                     comment: this.state.newComment
                 }
             })
-
-            // const letters = `${newComment}`
-            // try {
-            //     const response = axios.post(`https://cors-anywhere.herokuapp.com/https://cors-anywhere.herokuapp.com/http://localhost:8080/cupcakeShop/v1/comments`, {
-            //         comment: "hello"
-            //     })
-
-            // } catch (e) {
-            //     console.log(`axios request failed:  ${e}`)
-            // }
         }
 
 
 
         return (
             <div>
-                <textarea id="new-comment-box" value={this.state.newComment}
-                    onChange={this.handleChange}
-                />
+                <textarea id="new-comment-box" type="text" onChange={(e) => this.setState({ newComment: e.target.value })} value={this.state.newComment} name={"newComment"} placeholder={"Leave a comment"} />
                 <button className="button text-white" id="create-button" onClick={onCreate}>Create</button>
                 {this.state.comments.map(comment => (
                     <li id="list-comment" key={this.state.comments.id}>
@@ -81,3 +62,5 @@ export default class AddComment extends React.Component {
         )
     }
 }
+
+export default AddComment;
